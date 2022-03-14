@@ -4,8 +4,6 @@ import tensorflow as tf
 A simple forward neuron network
 Designed to contain only one hidden layer
 Used for estimation
-Activation function is sigmoid
-Loss function is MSE
 '''
 class NeuronNetwork:
     '''
