@@ -4,8 +4,6 @@ import tensorflow as tf
 A simple forward neuron network
 Designed to contain only one hidden layer
 Used for estimation
-Activation function is sigmoid
-Loss function is MSE
 '''
 class NeuronNetwork:
     '''
@@ -32,7 +30,7 @@ class NeuronNetwork:
 
     def lossFunc(self, predict, target):
         temp = (predict-target)*(predict-target)
-        return tf.reduce_sum(temp) / temp.shape[0]
+        return tf.reduce_sum(tf.math.sqrt(temp)) / temp.shape[0]
 
     '''
     input.shape = [batchSize, variableNumber, 1]
